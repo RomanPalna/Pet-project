@@ -22,9 +22,15 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/wine', (req, res) => {
-    res.render('wine', {wine, cssFileName: 'wine'})
+    res.render('wine', {wine, cssFileName: 'wine', pageTitle: 'Наші вина'})
+})
+
+app.get('/wine/:wineId', (req, res) => {
+    const oneWine = wine.find(w => w.id === req.params.wineId)
+    res.render('oneWine', {oneWine})
 })
 
 app.listen(4444, () => {
     console.log(`Application server is running on port ${4444}`);
+    
 });

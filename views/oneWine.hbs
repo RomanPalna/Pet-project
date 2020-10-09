@@ -1,0 +1,23 @@
+<div>
+    <h2>{{oneWine.name}}</h2>
+    <img src="{{oneWine.image}}" alt="{{oneWine.name}}" height="640">
+    <div>
+        <p>Про вино</p>
+        <ul>
+            {{#each oneWine.discription}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div>
+        <p>Дегустаційні відмітки</p>
+        <ul>
+            <li>Колір: {{oneWine.color}}</li>
+            <li>Смак: {{oneWine.taste}}</li>
+            <li>Аромат: {{oneWine.nose}}</li>
+            <li>Еногастрономічне поєднання: {{oneWine.gastro}}</li>
+        </ul>
+    </div>
+    <p>{{oneWine.price}} гривень.</p>
+</div>
