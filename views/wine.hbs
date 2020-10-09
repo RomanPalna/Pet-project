@@ -1,0 +1,31 @@
+<h1>Тут є вино</h1>
+
+<section>
+    <div>
+
+        {{#each wine}}
+        <h2>{{name}}</h2>
+        <img src="{{image}}" alt="{{name}}" height="640">
+        <div>
+            <p>Про вино</p>
+            <ul>
+                {{#each discription}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div>
+            <p>Дегустаційні відмітки</p>
+            <ul>
+                <li>Колір: {{color}}</li>
+                <li>Смак: {{taste}}</li>
+                <li>Аромат: {{nose}}</li>
+                <li>Еногастрономічне поєднання: {{gastro}}</li>
+            </ul>
+        </div>
+        <p>{{price}} гривень.</p>
+        {{/each}}
+
+    </div>
+</section>
