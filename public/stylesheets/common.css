@@ -34,3 +34,22 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+
+/* CSS for site-nav */
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.site-nav__item {
+  outline: blue;
+  margin-right: 20px;
+}
+.site-nav__item:last-child {
+  margin-right: 0;
+}
+
+.site-nav__container {
+  position: fixed;
+}

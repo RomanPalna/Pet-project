@@ -27,7 +27,7 @@ app.get('/wine', (req, res) => {
 
 app.get('/wine/:wineId', (req, res) => {
     const oneWine = wine.find(w => w.id === req.params.wineId)
-    res.render('oneWine', {oneWine})
+    res.render('oneWine', {oneWine, cssFileName: 'oneWine', pageTitle: 'Наші вина'})
 })
 
 app.listen(4444, () => {
