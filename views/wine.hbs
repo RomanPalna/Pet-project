@@ -1,12 +1,14 @@
 <div class="main-container">
     <h1>Тут є вино</h1>
 
-    <section>
+    <section class="wine">
         {{#each wine}}
-        <div>
-            <a href="/wine/{{id}}">
-                <h2>{{name}}</h2>
-                <img src="{{image}}" alt="{{name}}" height="640">
+        <div class="wine__item">
+            <a href="/wine/{{id}}" class="wine__link">
+
+                <img src="{{image}}" alt="{{name}}" height="560" class="wine__image">
+
+                <h2 class="wine__name">{{name}}</h2>
             </a>
 
         </div>
